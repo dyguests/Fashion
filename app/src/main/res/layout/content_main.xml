@@ -9,19 +9,29 @@
     tools:showIn="@layout/activity_main">
 
 
-    <ImageView
-        android:id="@+id/img_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <View
+        android:id="@+id/view"
+        android:layout_width="@dimen/unit_touch"
+        android:layout_height="@dimen/unit_touch"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:contentDescription="@null"
-        android:transitionName="@string/transition_name_img_logo"
+        android:background="@drawable/circle_primary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="@dimen/unit_touch"
+        android:layout_height="@dimen/unit_touch"
+        android:contentDescription="@null"
+        android:transitionName="@string/transition_name_img_logo"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
         app:srcCompat="@drawable/ic_logo_96dp" />
 </android.support.constraint.ConstraintLayout>
