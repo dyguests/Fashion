@@ -16,10 +16,15 @@ class WelcomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_welcome)
 
         Handler().postDelayed({
-            MainActivity.launch(this@WelcomeActivity, ActivityOptions.makeSceneTransitionAnimation(
+            MainActivity.launch(
                     this@WelcomeActivity,
-                    Pair(img_logo, getString(R.string.transition_name_img_logo))
-            ).toBundle())
+                    ActivityOptions.makeSceneTransitionAnimation(
+                            this@WelcomeActivity,
+                            Pair(constraint_layout, getString(R.string.transition_name_v_logo)),
+                            Pair(constraint_layout, getString(R.string.transition_name_v_logo)),
+                            Pair(img_logo, getString(R.string.transition_name_img_logo))
+                    ).toBundle()
+            )
             finishAfterTransition()
         }, 1000)
     }
