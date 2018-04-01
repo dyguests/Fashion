@@ -1,19 +1,17 @@
 package com.fanhl.fashion.ui.main
 
+import android.app.ActivityOptions
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.support.constraint.ConstraintLayout
-import android.support.constraint.ConstraintSet
-import android.support.design.widget.Snackbar
 import android.support.v7.app.AppCompatActivity
 import android.transition.TransitionManager
+import android.util.Pair
 import android.view.LayoutInflater
-import android.view.Menu
-import android.view.MenuItem
 import android.view.ViewGroup
 import com.fanhl.fashion.R
-
+import com.fanhl.fashion.ui.account.AccountActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -29,8 +27,15 @@ class MainActivity : AppCompatActivity() {
         }
 
         v_logo.setOnClickListener {
-            TransitionManager.beginDelayedTransition(root)
-            guideline.layoutParams = (guideline.layoutParams as ConstraintLayout.LayoutParams).apply { guidePercent = .5f }
+            //            TransitionManager.beginDelayedTransition(root)
+//            guideline.layoutParams = (guideline.layoutParams as ConstraintLayout.LayoutParams).apply { guidePercent = .5f }
+
+            AccountActivity.launch(this@MainActivity, ActivityOptions.makeSceneTransitionAnimation(
+                    this@MainActivity,
+                    Pair(ll_top, getString(R.string.transition_name_ll_top)),
+                    Pair(v_logo, getString(R.string.transition_name_v_logo)),
+                    Pair(img_logo, getString(R.string.transition_name_img_logo))
+            ).toBundle())
         }
         ll_bottom.setOnClickListener {
             TransitionManager.beginDelayedTransition(root)

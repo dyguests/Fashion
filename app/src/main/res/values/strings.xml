@@ -3,4 +3,5 @@
     <string name="action_settings">Settings</string>
     <string name="transition_name_img_logo">img_logo</string>
     <string name="transition_name_v_logo">v_logo</string>
+    <string name="transition_name_ll_top">ll_top</string>
 </resources>

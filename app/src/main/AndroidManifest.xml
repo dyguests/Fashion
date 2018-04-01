@@ -21,5 +21,9 @@
         <activity
             android:name=".ui.main.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.account.AccountActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
+
 </manifest>
