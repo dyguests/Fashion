@@ -2,5 +2,7 @@
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="unit">8dp</dimen>
     <dimen name="unit_half">4dp</dimen>
+    <dimen name="unit_double">16dp</dimen>
+    <dimen name="unit_3_times">24dp</dimen>
     <dimen name="unit_touch">48dp</dimen>
 </resources>
